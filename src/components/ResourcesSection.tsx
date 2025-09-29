@@ -4,31 +4,25 @@ const ResourcesSection = () => {
   const videos = [
     {
       title: "Textile Mountain – The Hidden Burden of Our Fashion Waste",
-      embedId: "VGiH6lJg30w",
+      embedId: "UC4oFmX8tHw",
       description: "An eye-opening documentary about textile waste's global impact"
     },
     {
       title: "Can We Really Recycle Our Old Clothes?",
-      embedId: "tLfNUD0-8ts", 
+      embedId: "YvBS6qagQdE", 
       description: "Exploring the realities and challenges of textile recycling"
     },
     {
       title: "The Simple Solution to Fast Fashion | TED – Josephine Philips",
-      embedId: "3oDPfqId-HY",
+      embedId: "Bh8dnw67rE0",
       description: "Innovative approaches to sustainable fashion consumption"
     },
     {
       title: "The True Cost of Fast Fashion",
-      embedId: "NrAr1xD6uNM",
+      embedId: "tLfNUD0-8ts",
       description: "Understanding fashion's environmental and social costs"
     }
   ];
-
-  const handleDownloadMemo = () => {
-    // This would normally link to an actual PDF file
-    // For demonstration, we'll show an alert
-    alert("Legal Memo would be downloaded here. In production, this would link to the actual PDF file.");
-  };
 
   return (
     <section id="resources" className="py-20 bg-background">
@@ -88,11 +82,13 @@ const ResourcesSection = () => {
             <Button 
               variant="sustainable" 
               size="lg"
-              onClick={handleDownloadMemo}
+              asChild
               className="gap-3"
             >
-              <span>📑</span>
-              Download Our Legal Memo
+              <a href="/pdfs/legal-memo.pdf" target="_blank" rel="noopener noreferrer">
+                <span>📑</span>
+                Download Our Legal Memo
+              </a>
             </Button>
             <p className="text-sm text-muted-foreground mt-4">
               PDF document • Opens in new tab

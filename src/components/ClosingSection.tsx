@@ -34,7 +34,7 @@ const ClosingSection = () => {
               variant="outline" 
               size="lg"
               onClick={scrollToTop}
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
             >
               Back to Top
             </Button>

@@ -1,4 +1,4 @@
-import problemIllustration from "@/assets/problem-illustration.jpg";
+import problemIllustration from "@/assets/problem-illustration.png";
 
 const ProblemSection = () => {
   const problems = [

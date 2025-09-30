@@ -1,15 +1,27 @@
+// Import all images at the top (so no runtime require issues)
+//import Agwa from "../assets/Agwa.jpeg";
+import Samuel from "../assets/Samuel.jpeg";
+import Achol from "../assets/Achol.jpeg";
+import Yahya from "../assets/Yahya.jpeg";
+import Natasha from "../assets/Natasha.jpeg";
+import Swaleh from "../assets/Swaleh.jpeg";
+import Wairimu from "../assets/Wairimu.jpeg";
+import Sarah from "../assets/Sarah.jpeg";
+//import Maingi from "../assets/Maingi.jpeg";
+import Paul from "../assets/Paul.jpeg";
+
 const TeamSection = () => {
   const teamMembers = [
-    "Agwa Awino",
-    "Samuel Ngware", 
-    "Priscilla Achol",
-    "Yahya Adan",
-    "Natasha Joy",
-    "Swaleh Sanaa",
-    "Wairimu Mburu",
-    "Nkaiwuatei Sarah Kiserian",
-    "Maingi Isidoro Fredrick Muriithi",
-    "Paul Jerry Wafula"
+    //{ name: "Agwa Awino", image: Agwa },
+    { name: "Samuel Ngware", image: Samuel },
+    { name: "Priscilla Achol", image: Achol },
+    { name: "Yahya Adan", image: Yahya },
+    { name: "Natasha Joy", image: Natasha },
+    { name: "Swaleh Sanaa", image: Swaleh },
+    { name: "Wairimu Mburu", image: Wairimu },
+    { name: "Nkaiwuatei Sarah Kiserian", image: Sarah },
+    //{ name: "Maingi Isidoro Fredrick Muriithi", image: Maingi },
+    { name: "Paul Jerry Wafula", image: Paul }
   ];
 
   return (
@@ -29,20 +41,28 @@ const TeamSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {teamMembers.map((name, index) => (
+          {teamMembers.map((member, index) => (
             <div 
-              key={name}
+              key={member.name}
               className="bg-background rounded-xl p-6 shadow-soft hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-slide-in-left"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-hero rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary-foreground">
-                    {name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
+                {member.image ? (
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-24 h-24 object-cover rounded-full mx-auto mb-4 shadow-md border-4 border-primary/30"
+                  />
+                ) : (
+                  <div className="w-16 h-16 bg-gradient-hero rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-primary-foreground">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                )}
                 <h3 className="text-lg font-semibold text-foreground">
-                  {name}
+                  {member.name}
                 </h3>
                 <p className="text-sm text-muted-foreground mt-2">
                   Final-Year LLB Student

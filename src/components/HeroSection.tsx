@@ -9,12 +9,12 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Image with Overlay */}
+      {/* Background Image with Better Visibility */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/50 to-background/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background/60"></div>
       </div>
       
       {/* Content */}
@@ -27,13 +27,16 @@ const HeroSection = () => {
             Rethinking Kenya's Second-Hand Clothing Story
           </p>
           
-          {/* New Intro Text */}
-          <div className="bg-background/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 mb-8 shadow-strong max-w-3xl mx-auto border border-primary/20">
-            <p className="text-lg sm:text-xl md:text-2xl text-foreground leading-relaxed font-medium">
-              This campaign is about awareness, responsibility and seeking solutions. We ask one simple question: 
-              <span className="block mt-4 text-xl sm:text-2xl md:text-3xl font-bold text-primary">
-                What kind of footprint will you leave?
-              </span>
+          {/* New Intro Text - No box, flowing design */}
+          <div className="max-w-4xl mx-auto mb-8 px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-foreground leading-relaxed font-medium drop-shadow-lg mb-6">
+              This campaign is about <span className="text-sustainable font-bold">awareness</span>, <span className="text-sustainable font-bold">responsibility</span> and seeking <span className="text-sustainable font-bold">solutions</span>.
+            </p>
+            <p className="text-xl sm:text-2xl text-foreground/90 leading-relaxed drop-shadow-lg mb-4">
+              We ask one simple question:
+            </p>
+            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-sustainable drop-shadow-2xl leading-tight animate-pulse">
+              What kind of footprint will you leave?
             </p>
           </div>
 
@@ -64,8 +67,8 @@ const HeroSection = () => {
       
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
-        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary rounded-full mt-2"></div>
+        <div className="w-6 h-10 border-2 border-sustainable rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-sustainable rounded-full mt-2"></div>
         </div>
       </div>
     </section>

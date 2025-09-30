@@ -7,7 +7,11 @@ const Navigation = () => {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    if (element) {
+      const yOffset = -80; // adjust if nav height changes
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
     setMobileMenuOpen(false);
   };
 
@@ -25,7 +29,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button
-            onClick={() => scrollToSection('hero')}
+            onClick={() => scrollToSection("hero")}
             className="text-xl font-bold text-primary hover:text-primary-light transition-colors"
           >
             Fashion Footprint

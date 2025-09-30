@@ -42,39 +42,55 @@ const ProblemSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Statistics Grid */}
-          <div className="space-y-6">
-            {problems.map((problem, index) => (
-              <div 
-                key={index}
-                className="flex items-start gap-6 bg-card rounded-xl p-6 shadow-soft hover:shadow-strong transition-all duration-300 animate-slide-in-left"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-4xl">{problem.icon}</div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">
-                    {problem.stat}
-                  </div>
-                  <p className="text-foreground text-lg leading-relaxed">
-                    {problem.description}
-                  </p>
-                </div>
+        {/* Statistics Grid - Side by Side */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {problems.map((problem, index) => (
+            <div 
+              key={index}
+              className="bg-card rounded-xl p-6 shadow-soft hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in text-center"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="text-5xl mb-4">{problem.icon}</div>
+              <div className="text-4xl font-bold text-primary mb-3">
+                {problem.stat}
               </div>
-            ))}
-          </div>
-
-          {/* Problem Illustration */}
-          <div className="relative animate-fade-in">
-            <div className="rounded-2xl overflow-hidden shadow-strong">
-              <img 
-                src={problemIllustration} 
-                alt="Environmental impact of textile waste in Kenya"
-                className="w-full h-auto object-cover"
-              />
+              <p className="text-foreground text-base leading-relaxed">
+                {problem.description}
+              </p>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
+          ))}
+        </div>
+
+        {/* Problem Illustration */}
+        <div className="relative animate-fade-in mb-16">
+          <div className="rounded-2xl overflow-hidden shadow-strong max-w-4xl mx-auto">
+            <img 
+              src={problemIllustration} 
+              alt="Environmental impact of textile waste in Kenya"
+              className="w-full h-auto object-cover"
+            />
           </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
+        </div>
+
+        {/* Video Section */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-foreground mb-8 text-center">
+            See the Impact
+          </h3>
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-strong">
+            <video 
+              controls 
+              className="w-full h-auto"
+              poster={problemIllustration}
+            >
+              <source src="/video/textile-waste.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p className="text-center text-muted-foreground mt-4 text-sm">
+            Add your MP4 video file to <code className="bg-muted px-2 py-1 rounded">public/video/textile-waste.mp4</code>
+          </p>
         </div>
 
         {/* Impact Statement */}

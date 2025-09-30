@@ -8,7 +8,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -26,6 +26,17 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
             Rethinking Kenya's Second-Hand Clothing Story
           </p>
+          
+          {/* New Intro Text */}
+          <div className="bg-gradient-sustainable rounded-2xl p-8 mb-8 shadow-strong max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-foreground leading-relaxed font-medium">
+              This campaign is about awareness, responsibility and seeking solutions. We ask one simple question: 
+              <span className="block mt-4 text-2xl md:text-3xl font-bold text-primary">
+                What kind of footprint will you leave?
+              </span>
+            </p>
+          </div>
+
           <p className="text-lg md:text-xl text-secondary-dark mb-12 max-w-3xl mx-auto font-medium">
             Legal research, storytelling, and community solutions for a sustainable textile future.
           </p>

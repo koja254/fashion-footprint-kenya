@@ -1,12 +1,4 @@
 import { useState } from "react";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -40,32 +32,16 @@ const Navigation = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors">
-                    Explore
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 bg-background">
-                      {navLinks.map((link) => (
-                        <li key={link.id}>
-                          <NavigationMenuLink asChild>
-                            <button
-                              onClick={() => scrollToSection(link.id)}
-                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground w-full text-left"
-                            >
-                              <div className="text-sm font-medium leading-none">{link.label}</div>
-                            </button>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                {link.label}
+              </button>
+            ))}
           </div>
 
           {/* Mobile Menu Toggle */}

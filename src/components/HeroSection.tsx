@@ -14,30 +14,30 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
-        <div className="absolute inset-0 bg-gradient-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/50 to-background/80"></div>
       </div>
       
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight drop-shadow-lg">
             Fashion <span className="text-primary">Footprint</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-foreground/90 mb-8 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
             Rethinking Kenya's Second-Hand Clothing Story
           </p>
           
           {/* New Intro Text */}
-          <div className="bg-gradient-sustainable rounded-2xl p-8 mb-8 shadow-strong max-w-3xl mx-auto">
-            <p className="text-xl md:text-2xl text-foreground leading-relaxed font-medium">
+          <div className="bg-background/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 mb-8 shadow-strong max-w-3xl mx-auto border border-primary/20">
+            <p className="text-lg sm:text-xl md:text-2xl text-foreground leading-relaxed font-medium">
               This campaign is about awareness, responsibility and seeking solutions. We ask one simple question: 
-              <span className="block mt-4 text-2xl md:text-3xl font-bold text-primary">
+              <span className="block mt-4 text-xl sm:text-2xl md:text-3xl font-bold text-primary">
                 What kind of footprint will you leave?
               </span>
             </p>
           </div>
 
-          <p className="text-lg md:text-xl text-secondary-dark mb-12 max-w-3xl mx-auto font-medium">
+          <p className="text-base sm:text-lg md:text-xl text-foreground/80 mb-12 max-w-3xl mx-auto font-medium drop-shadow-sm">
             Legal research, storytelling, and community solutions for a sustainable textile future.
           </p>
           
@@ -46,7 +46,7 @@ const HeroSection = () => {
               variant="hero" 
               size="lg"
               onClick={() => scrollToSection('problem')}
-              className="animate-scale-in animation-delay-300"
+              className="animate-scale-in animation-delay-300 w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow"
             >
               Explore the Problem
             </Button>
@@ -54,7 +54,7 @@ const HeroSection = () => {
               variant="sustainable" 
               size="lg"
               onClick={() => scrollToSection('solutions')}
-              className="animate-scale-in animation-delay-500"
+              className="animate-scale-in animation-delay-500 w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow"
             >
               Discover Solutions
             </Button>

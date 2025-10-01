@@ -1,5 +1,5 @@
 // Import all images at the top (so no runtime require issues)
-//import Agwa from "../assets/Agwa.jpeg";
+import Agwa from "../assets/Agwa.jpeg";
 import Samuel from "../assets/Samuel.jpeg";
 import Achol from "../assets/Achol.jpeg";
 import Yahya from "../assets/Yahya.jpeg";
@@ -7,12 +7,12 @@ import Natasha from "../assets/Natasha.jpeg";
 import Swaleh from "../assets/Swaleh.jpeg";
 import Wairimu from "../assets/Wairimu.jpeg";
 import Sarah from "../assets/Sarah.jpeg";
-//import Maingi from "../assets/Maingi.jpeg";
+import Maingi from "../assets/Maingi.jpeg";
 import Paul from "../assets/Paul.jpeg";
 
 const TeamSection = () => {
   const teamMembers = [
-    //{ name: "Agwa Awino", image: Agwa },
+    { name: "Agwa Awino", image: Agwa },
     { name: "Samuel Ngware", image: Samuel },
     { name: "Priscilla Achol", image: Achol },
     { name: "Yahya Adan", image: Yahya },
@@ -20,7 +20,7 @@ const TeamSection = () => {
     { name: "Swaleh Sanaa", image: Swaleh },
     { name: "Wairimu Mburu", image: Wairimu },
     { name: "Nkaiwuatei Sarah Kiserian", image: Sarah },
-    //{ name: "Maingi Isidoro Fredrick Muriithi", image: Maingi },
+    { name: "Maingi Isidoro Fredrick Muriithi", image: Maingi },
     { name: "Paul Jerry Wafula", image: Paul }
   ];
 

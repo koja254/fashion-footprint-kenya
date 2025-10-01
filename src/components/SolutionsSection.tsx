@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import solutionsImage from "@/assets/solutions-image.jpg";
+import swap from "@/assets/swap.jpeg";
+import poster from "@/assets/poster.jpeg";
 
 const SolutionsSection = () => {
   const solutions = [
@@ -48,6 +50,24 @@ const SolutionsSection = () => {
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-foreground">
               Together, we can turn fashion from a polluter into a protector.
             </p>
+          </div>
+        </div>
+
+        {/* Image Grid - Two Images Side by Side */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 animate-fade-in">
+          <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-strong">
+            <img 
+              src={swap} 
+              alt="Community clothes swap event"
+              className="w-full h-full object-cover aspect-square"
+            />
+          </div>
+          <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-strong">
+            <img 
+              src={poster} 
+              alt="Sustainable fashion awareness poster"
+              className="w-full h-full object-cover aspect-square"
+            />
           </div>
         </div>
 

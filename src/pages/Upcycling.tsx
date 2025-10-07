@@ -268,13 +268,13 @@ const Upcycling: React.FC = () => {
                 className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-10 py-6 rounded-full shadow-xl font-semibold hover:scale-105 transition-transform"
               >
                 <a
-                  href="https://www.instagram.com/the_swap_circle"
+                  href="https://www.instagram.com/fashionfootprintke"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3"
                 >
                   <Instagram className="w-6 h-6" />
-                  Follow @the_swap_circle
+                  Follow @fashionfootprintke
                 </a>
               </Button>
             </div>

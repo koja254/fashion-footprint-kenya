@@ -33,6 +33,7 @@ const Solutions = () => {
     }
   ];
 
+  /*
   const additionalSolutions = [
     {
       title: "Clothes Swaps",
@@ -45,6 +46,7 @@ const Solutions = () => {
       icon: "✂️"
     }
   ];
+  */
 
   return (
     <div className="min-h-screen">
@@ -107,24 +109,6 @@ const Solutions = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Additional Solutions */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-16">
-            {additionalSolutions.map((solution, index) => (
-              <div 
-                key={index}
-                className="bg-card rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-300 hover:-translate-y-2 border-2 border-border text-center"
-              >
-                <div className="text-6xl mb-6">{solution.icon}</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
-                  {solution.title}
-                </h3>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  {solution.description}
-                </p>
-              </div>
-            ))}
           </div>
 
           {/* Solutions Image */}

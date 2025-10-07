@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Instagram, MessageCircle, Calendar, Users, CalendarPlus, Share2, QrCode } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import event from "@/assets/event.jpeg";
+import { Link } from "react-router-dom";
 
 const Community = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -61,7 +62,7 @@ const Community = () => {
           {/* Header */}
           <div className="text-center mb-20 animate-fade-in">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6">
-              Join Our <span className="text-emerald-600">Community</span>
+              Join the <span className="text-emerald-600">Community</span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Be part of the movement. Connect, share, and make a difference together.
@@ -208,7 +209,7 @@ const Community = () => {
                   <Instagram className="w-10 h-10 text-white" />
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                  Follow Us on Instagram
+                  Follow Them on Instagram
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto leading-relaxed">
                   Daily inspiration, event updates, and sustainable fashion tips. Join our visual community!
@@ -237,10 +238,10 @@ const Community = () => {
                   <MessageCircle className="w-10 h-10 text-white" />
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                  Join Our WhatsApp
+                  Join their WhatsApp
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto leading-relaxed">
-                  Connect directly with our community. Get instant updates and share your journey!
+                  Connect directly with their community. Get instant updates and share your journey!
                 </p>
                 <Button
                   asChild
@@ -263,7 +264,7 @@ const Community = () => {
           {/* Community Benefits */}
           <div className="mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4 text-gray-900">
-              Why Join Our Community?
+              Why Join the Community?
             </h2>
             <p className="text-center text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
               Discover the amazing benefits of being part of The Swap Circle family
@@ -311,7 +312,6 @@ const Community = () => {
           {/* Final CTA */}
           <div className="text-center">
             <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-3xl p-12 sm:p-16 shadow-2xl relative overflow-hidden border border-gray-700">
-              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0YzAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0IDEuNzkgNCA0IDQgNC0xLjc5IDQtNHptMC0xMGMwLTIuMjEtMS43OS00LTQtNHMtNCAxLjc5LTQgNCAxLjc5IDQgNCA0IDQtMS43OSA0LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
               <div className="relative">
                 <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                   Together, We Transform Fashion
@@ -320,16 +320,12 @@ const Community = () => {
                   Every person who joins our community is a step towards a more sustainable future. 
                   Your participation matters — let's make a difference, one swap at a time.
                 </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <span className="bg-emerald-600/20 border border-emerald-500/30 backdrop-blur-sm px-6 py-3 rounded-full text-emerald-300 font-semibold">
-                    ♻️ Sustainable
-                  </span>
-                  <span className="bg-blue-600/20 border border-blue-500/30 backdrop-blur-sm px-6 py-3 rounded-full text-blue-300 font-semibold">
-                    🤝 Community-Driven
-                  </span>
-                  <span className="bg-teal-600/20 border border-teal-500/30 backdrop-blur-sm px-6 py-3 rounded-full text-teal-300 font-semibold">
-                    💚 Eco-Friendly
-                  </span>
+
+                {/* NEW: Button to About */}
+                <div className="mt-4">
+                  <Button size="lg" asChild className="bg-white text-slate-900 px-8 py-4 font-semibold shadow-lg">
+                    <Link to="/about">Learn More About Us →</Link>
+                  </Button>
                 </div>
               </div>
             </div>

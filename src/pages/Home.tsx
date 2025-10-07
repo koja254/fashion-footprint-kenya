@@ -103,7 +103,7 @@ const Home = () => {
                 asChild
                 className="w-full sm:w-auto bg-gray-900 hover:bg-gray-800 text-white text-lg px-8 py-6 rounded-xl shadow-md font-semibold transition-all hover:shadow-lg"
               >
-                <Link to="/community">Join Our Community</Link>
+                <Link to="/community">Join the Community</Link>
               </Button>
             </div>
           </div>

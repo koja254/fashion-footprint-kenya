@@ -1,7 +1,9 @@
+import Navigation from "@/components/Navigation";
+import problemImage from "@/assets/problem-illustration.png";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
-import Navigation from "@/components/Navigation";
+import { Link } from "react-router-dom";
 
 const Resources = () => {
   const [showAllVideos, setShowAllVideos] = useState(false);
@@ -266,6 +268,13 @@ const Resources = () => {
                 ))}
               </div>
             )}
+          </div>
+
+          {/* NEW: CTA to Community */}
+          <div className="mt-12 text-center">
+            <Button size="lg" asChild className="bg-primary text-white px-8 py-4 font-semibold shadow-lg">
+              <Link to="/community">Join the Community →</Link>
+            </Button>
           </div>
         </div>
       </section>

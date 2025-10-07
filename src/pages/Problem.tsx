@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import problemImage from "@/assets/problem-illustration.png";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Problem = () => {
   const statistics = [
@@ -117,6 +119,13 @@ const Problem = () => {
                 While the problem is massive, solutions exist. Through awareness, action, and 
                 collective effort, we can transform fashion from a polluter into a protector.
               </p>
+
+              {/* NEW: Button to Solutions */}
+              <div className="mt-6">
+                <Button size="lg" asChild className="bg-primary text-white font-semibold px-8 py-4 shadow-lg">
+                  <Link to="/solutions">Explore Solutions →</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

@@ -8,55 +8,61 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Core Background Colors */
-    --background: 35 25% 98%;  /* Natural cream */
-    --foreground: 160 15% 15%;  /* Deep charcoal green */
+    /* Core Background Colors - Warm & Natural */
+    --background: 40 40% 97%;  /* Soft warm cream */
+    --foreground: 25 25% 15%;  /* Rich dark brown */
 
     /* Card & Popover Colors */
-    --card: 40 30% 96%;  /* Warm off-white */
-    --card-foreground: 160 15% 15%;
+    --card: 35 45% 95%;  /* Warm off-white */
+    --card-foreground: 25 25% 15%;
 
-    --popover: 40 30% 96%;
-    --popover-foreground: 160 15% 15%;
+    --popover: 35 45% 95%;
+    --popover-foreground: 25 25% 15%;
 
-    /* Primary Color - Forest Green */
-    --primary: 150 40% 25%;  /* Deep forest green */
-    --primary-foreground: 40 30% 96%;
-    --primary-light: 150 35% 35%;  /* Lighter forest green */
-    --primary-glow: 150 50% 45%;  /* Glowing green accent */
+    /* Primary Color - Warm Terracotta */
+    --primary: 15 65% 50%;  /* Terracotta/burnt orange */
+    --primary-foreground: 40 40% 98%;
+    --primary-light: 15 60% 60%;  /* Lighter terracotta */
+    --primary-glow: 15 70% 55%;  /* Glowing terracotta */
 
-    /* Secondary Color - Earth Brown */
-    --secondary: 25 35% 85%;  /* Light earth tone */
-    --secondary-foreground: 25 25% 25%;  /* Dark earth brown */
-    --secondary-dark: 25 25% 25%;  /* Rich earth brown */
+    /* Secondary Color - Earth Sage */
+    --secondary: 140 25% 60%;  /* Soft sage green */
+    --secondary-foreground: 140 30% 20%;  /* Dark sage */
+    --secondary-dark: 140 30% 25%;  /* Rich sage */
 
-    /* Accent Color - Sustainable Gold */
-    --accent: 45 55% 70%;  /* Warm sustainable gold */
-    --accent-foreground: 25 25% 25%;
-    --accent-bright: 45 75% 55%;  /* Bright gold highlight */
+    /* Accent Color - Golden Honey */
+    --accent: 40 85% 60%;  /* Warm golden honey */
+    --accent-foreground: 25 25% 15%;
+    --accent-bright: 40 90% 55%;  /* Bright honey gold */
+
+    /* Sustainable Green */
+    --sustainable: 140 45% 45%;  /* Natural green */
+    --sustainable-foreground: 140 45% 98%;
+    --sustainable-light: 140 40% 55%;
 
     /* Muted Colors */
-    --muted: 35 20% 90%;  /* Soft natural tone */
-    --muted-foreground: 160 10% 40%;  /* Muted green-gray */
+    --muted: 35 25% 88%;  /* Soft beige */
+    --muted-foreground: 25 15% 45%;  /* Muted brown */
 
     /* System Colors */
     --destructive: 0 70% 55%;
-    --destructive-foreground: 40 30% 96%;
+    --destructive-foreground: 40 40% 98%;
 
-    --border: 35 15% 85%;
-    --input: 35 15% 88%;
-    --ring: 150 40% 25%;
+    --border: 35 20% 82%;
+    --input: 35 20% 90%;
+    --ring: 15 65% 50%;
 
-    /* Environmental Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-earth: linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--accent)) 100%);
-    --gradient-sustainable: linear-gradient(45deg, hsl(var(--primary-glow)), hsl(var(--accent-bright)));
-    --gradient-overlay: linear-gradient(180deg, hsl(var(--background) / 0.95), hsl(var(--background) / 0.8));
+    /* Warm Environmental Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(15 65% 50%), hsl(40 85% 60%));
+    --gradient-earth: linear-gradient(180deg, hsl(140 25% 60%) 0%, hsl(40 85% 60%) 100%);
+    --gradient-sustainable: linear-gradient(45deg, hsl(140 45% 45%), hsl(15 65% 50%));
+    --gradient-warm: linear-gradient(135deg, hsl(40 85% 60%), hsl(15 65% 50%));
+    --gradient-overlay: linear-gradient(180deg, hsl(var(--background) / 0.95), hsl(var(--background) / 0.85));
 
-    /* Shadows */
-    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
-    --shadow-strong: 0 8px 30px hsl(var(--primary) / 0.15);
-    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
+    /* Soft Shadows */
+    --shadow-soft: 0 4px 20px hsl(15 65% 50% / 0.12);
+    --shadow-strong: 0 8px 30px hsl(15 65% 50% / 0.18);
+    --shadow-glow: 0 0 30px hsl(40 85% 60% / 0.35);
 
     --radius: 0.75rem;
     --radius-lg: 1rem;

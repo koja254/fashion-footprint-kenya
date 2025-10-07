@@ -35,6 +35,11 @@ export default {
           foreground: "hsl(var(--accent-foreground))",
           bright: "hsl(var(--accent-bright))",
         },
+        sustainable: {
+          DEFAULT: "hsl(var(--sustainable))",
+          foreground: "hsl(var(--sustainable-foreground))",
+          light: "hsl(var(--sustainable-light))",
+        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
@@ -72,6 +77,7 @@ export default {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-earth': 'var(--gradient-earth)',
         'gradient-sustainable': 'var(--gradient-sustainable)',
+        'gradient-warm': 'var(--gradient-warm)',
         'gradient-overlay': 'var(--gradient-overlay)',
       },
       boxShadow: {

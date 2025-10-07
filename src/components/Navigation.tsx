@@ -1,50 +1,50 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const yOffset = -80; // adjust if nav height changes
-      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-    setMobileMenuOpen(false);
-  };
+  const location = useLocation();
 
   const navLinks = [
-    { label: "Home", id: "hero" },
-    { label: "Our Team", id: "team" },
-    { label: "The Problem", id: "problem" },
-    { label: "Solutions", id: "solutions" },
-    { label: "Resources", id: "resources" },
+    { label: "Home", path: "/" },
+    { label: "Problem", path: "/problem" },
+    { label: "Solutions", path: "/solutions" },
+    { label: "Upcycling", path: "/upcycling" },
+    { label: "Resources", path: "/resources" },
+    { label: "Community", path: "/community" },
+    { label: "About", path: "/about" },
   ];
 
+  const isActive = (path: string) => location.pathname === path;
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/98 backdrop-blur-md border-b border-border shadow-soft">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <button
-            onClick={() => scrollToSection("hero")}
-            className="text-xl font-bold text-primary hover:text-primary-light transition-colors"
+          <Link
+            to="/"
+            className="text-xl sm:text-2xl font-bold text-primary hover:text-primary-light transition-colors"
           >
             Fashion Footprint
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`text-sm font-medium transition-colors px-3 py-2 rounded-md ${
+                  isActive(link.path)
+                    ? 'text-primary bg-primary/10'
+                    : 'text-foreground hover:text-primary hover:bg-primary/5'
+                }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
           </div>
 
@@ -52,7 +52,7 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X /> : <Menu />}
@@ -61,15 +61,20 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 space-y-2 animate-fade-in">
+          <div className="lg:hidden mt-4 space-y-2 animate-fade-in">
             {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left px-4 py-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block w-full text-left px-4 py-2 rounded-md transition-colors ${
+                  isActive(link.path)
+                    ? 'bg-primary text-primary-foreground'
+                    : 'hover:bg-accent hover:text-accent-foreground'
+                }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
           </div>
         )}

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Instagram } from "lucide-react";
 import Navigation from "@/components/Navigation";
 
 const Upcycling = () => {
@@ -56,47 +56,47 @@ const Upcycling = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-slate-100">
       <Navigation />
       
       <section className="py-24 px-4 sm:px-6 lg:px-8 pt-32">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6">
-              The Art of <span className="text-primary">Upcycling</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              The Art of <span className="text-emerald-600">Upcycling</span>
             </h1>
-            <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Transform waste into wonder — creative ways to give old clothes new life
             </p>
           </div>
 
           {/* Hero Statement */}
-          <div className="bg-gradient-warm rounded-2xl p-8 sm:p-12 shadow-strong mb-16 text-center">
-            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground leading-tight">
-              Upcycling isn't just about saving clothes — it's about <span className="text-primary">reimagining</span> what fashion can be.
+          <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-lg mb-16 text-center border border-gray-200">
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+              Upcycling isn't just about saving clothes — it's about <span className="text-emerald-600">reimagining</span> what fashion can be.
             </p>
           </div>
 
           {/* Video Section */}
           <div className="mb-16">
-            <div className="bg-card rounded-2xl p-6 sm:p-10 shadow-strong">
-              <h2 className="text-2xl sm:text-3xl font-bold text-center text-foreground mb-8">
+            <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-lg border border-gray-200">
+              <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8">
                 Watch: Upcycling Tutorials & Inspiration
               </h2>
-              <div className="aspect-video bg-muted rounded-xl overflow-hidden shadow-soft mb-6 flex items-center justify-center">
+              <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-50 rounded-xl overflow-hidden shadow-sm mb-6 flex items-center justify-center border border-gray-200">
                 {/* Placeholder for video - user can add their own video file */}
                 <div className="text-center p-8">
                   <div className="text-6xl mb-4">🎬</div>
-                  <p className="text-xl font-semibold text-muted-foreground mb-2">
+                  <p className="text-xl font-semibold text-gray-700 mb-2">
                     Video Coming Soon
                   </p>
-                  <p className="text-muted-foreground">
-                    Add your upcycling tutorial video to: <code className="bg-muted px-2 py-1 rounded">/public/video/upcycling.mp4</code>
+                  <p className="text-gray-600 text-sm">
+                    Add your upcycling tutorial video to: <code className="bg-gray-200 px-2 py-1 rounded text-xs">/public/video/upcycling.mp4</code>
                   </p>
                 </div>
               </div>
-              <p className="text-center text-muted-foreground text-sm sm:text-base">
+              <p className="text-center text-gray-600 text-sm sm:text-base">
                 Learn step-by-step techniques to transform old clothing into new treasures
               </p>
             </div>
@@ -104,29 +104,29 @@ const Upcycling = () => {
 
           {/* Upcycling Ideas Grid */}
           <div className="mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-10">
               Upcycling Ideas to Try
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {upcyclingIdeas.map((idea, index) => (
                 <div 
                   key={index}
-                  className="bg-card rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-300 hover:-translate-y-2 border-2 border-border group"
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-200 hover:border-emerald-300 group"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
                     {idea.icon}
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
                     {idea.title}
                   </h3>
-                  <p className="text-base text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-base text-gray-600 leading-relaxed mb-4">
                     {idea.description}
                   </p>
-                  <span className={`inline-block px-4 py-1 rounded-full text-sm font-medium ${
-                    idea.difficulty === 'Beginner' ? 'bg-sustainable/20 text-sustainable' :
-                    idea.difficulty === 'Intermediate' ? 'bg-accent/20 text-accent-foreground' :
-                    'bg-primary/20 text-primary'
+                  <span className={`inline-block px-4 py-2 rounded-full text-sm font-semibold ${
+                    idea.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 border border-green-200' :
+                    idea.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 border border-yellow-200' :
+                    'bg-red-100 text-red-700 border border-red-200'
                   }`}>
                     {idea.difficulty}
                   </span>
@@ -137,34 +137,32 @@ const Upcycling = () => {
 
           {/* Learning Resources */}
           <div className="mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-10">
               Learn the Skills
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {learningResources.map((resource, index) => (
                 <div 
                   key={index}
-                  className="bg-gradient-earth rounded-2xl p-8 sm:p-10 shadow-soft hover:shadow-strong transition-all duration-300"
+                  className="bg-white rounded-3xl p-8 sm:p-10 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-emerald-300 group"
                 >
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors">
                     {resource.title}
                   </h3>
-                  <p className="text-base sm:text-lg text-foreground/90 leading-relaxed mb-6">
+                  <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
                     {resource.description}
                   </p>
                   <Button
-                    variant="default"
-                    size="lg"
                     asChild
-                    className="w-full sm:w-auto"
+                    className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white shadow-md font-semibold group-hover:scale-105 transition-transform"
                   >
                     <a 
                       href={resource.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2"
+                      className="flex items-center justify-center gap-2"
                     >
-                      Start Learning <ExternalLink className="w-4 h-4" />
+                      Start Learning <ExternalLink className="w-5 h-5" />
                     </a>
                   </Button>
                 </div>
@@ -172,30 +170,35 @@ const Upcycling = () => {
             </div>
           </div>
 
-          {/* Community Gallery Placeholder */}
-          <div className="bg-gradient-hero rounded-2xl p-8 sm:p-12 shadow-glow text-center">
-            <div className="text-6xl mb-6">📸</div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">
-              Share Your Creations
-            </h2>
-            <p className="text-lg sm:text-xl text-primary-foreground/95 mb-6 max-w-2xl mx-auto leading-relaxed">
-              Have you created something amazing through upcycling? 
-              Share your projects with our community on Instagram and inspire others!
-            </p>
-            <Button
-              variant="outline"
-              size="lg"
-              asChild
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-            >
-              <a 
-                href="https://www.instagram.com/the_swap_circle" 
-                target="_blank" 
-                rel="noopener noreferrer"
+          {/* Community Gallery */}
+          <div className="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 rounded-3xl p-8 sm:p-12 shadow-2xl text-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00em0wLTEwYzAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0IDEuNzkgNCA0IDQgNC0xLjc5IDQtNHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20"></div>
+            <div className="relative">
+              <div className="bg-white/20 backdrop-blur-sm w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Instagram className="w-10 h-10 text-white" />
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Share Your Creations
+              </h2>
+              <p className="text-lg sm:text-xl text-white/95 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Have you created something amazing through upcycling? 
+                Share your projects with our community on Instagram and inspire others!
+              </p>
+              <Button
+                asChild
+                className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-10 py-6 rounded-full shadow-xl font-semibold hover:scale-105 transition-transform"
               >
-                Follow @the_swap_circle
-              </a>
-            </Button>
+                <a 
+                  href="https://www.instagram.com/the_swap_circle" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3"
+                >
+                  <Instagram className="w-6 h-6" />
+                  Follow @the_swap_circle
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
